@@ -108,7 +108,7 @@ namespace elso_valodi_csharp_projekt
                 Console.WriteLine("Nem szerkeszthető");
             }*/
 
-            //8.Feladat
+            /*8.Feladat
             Console.Write("Adj meg egy számot ");
             int szamA = Convert.ToInt32(Console.ReadLine());
             Console.Write("Adj meg egy másik számot ");
@@ -124,7 +124,51 @@ namespace elso_valodi_csharp_projekt
             else
             {
                 Console.WriteLine("A feladat nem megoldahtó");
+            }*/
+
+            /*15.Feladat
+
+            Console.Write("Írj be egy számot ");
+            int s = Convert.ToInt32(Console.ReadLine());
+            string kiiratas = "";
+
+            for (int i = 1; i <= s; i++)
+            {
+                kiiratas += i + " ";
             }
+            Console.WriteLine(kiiratas);*/
+
+            /*Console.Write("Írj be egy számot ");
+            int s = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i < s; i++)
+            {
+                Console.Write(i + " ");
+            }*/
+
+            /* Console.Write("Írj be egy számot ");
+             int s = Convert.ToInt32(Console.ReadLine());
+             int i = 1;*/
+
+            /*while (i < s)
+            {
+                Console.Write(i++ + " ");
+                //i = i + 1;
+                //i += 1;
+                //i++;
+            }*/
+
+            /*do
+            {
+                Console.Write(i++ + " ");
+            } while (i < s);
+            */
+
+            //16.Feladat
+
+            Console.Write("Írj be egy számot ");
+            int s = Convert.ToInt32(Console.ReadLine());
+
 
             Console.ReadKey(true);
         }
