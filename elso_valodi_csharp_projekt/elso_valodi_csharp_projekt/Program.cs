@@ -164,13 +164,356 @@ namespace elso_valodi_csharp_projekt
             } while (i < s);
             */
 
-            //16.Feladat
+            /*16.Feladat
 
             Console.Write("Írj be egy számot ");
             int s = Convert.ToInt32(Console.ReadLine());
+            //string kiiratas = "";
+
+            /*for (int i = 0; i < s; i++)
+            {
+                Console.WriteLine(i);
+            }*/
+
+            /*int i = 1;*/
+
+            /*while (i < s)
+            {
+                Console.WriteLine(i++);
+            }*/
+
+
+            /*do
+            {
+                Console.WriteLine(i);
+            } while (i < s);*/
+
+            /*17.Feladat
+            Console.Write("Írj be egy számot ");
+            int s = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"{s} egész osztói: ");
+
+            /*for (int i = 1; i <= s; i++)
+            {
+                if (s % i == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            int i = 1;
+            while (i <= s)
+            {
+                if (s % i == 0)
+                {
+                    Console.WriteLine(i);
+                }
+                i++;
+                
+            }*/
+
+
+            /*+Feladat
+
+            Console.Write("Írj be egy számot ");
+            int s = Convert.ToInt32(Console.ReadLine());
+            int szamlalo = 0;
+
+            for (int i = 1; i < s + 1; i++)
+            {
+                if (s % i == 0)
+                {
+                    szamlalo++;
+                }
+            }
+            if (szamlalo == 2)
+            {
+                Console.WriteLine($" A bemenő szám {s} prím.");
+            }
+            else
+            {
+                Console.WriteLine($"A bemenő szám {s} nem prím.");
+            }*/
+
+            /*18.Feladat
+            Console.Write("Írj be egy számot ");
+            int s = Convert.ToInt32(Console.ReadLine());
+            int szamlalo = 0;
+            int osztokosszege = 0;
+
+
+            for (int i = 0; i < s + 1; i++)
+            {
+                if (s % i == 0)
+                {
+                    szamlalo++;
+                    osztokosszege += 1;
+                }
+            }
+
+            if (szamlalo == 2)
+            {
+                Console.WriteLine($"A bemenő szám {s} osztóinak összege: {osztokosszege}");
+            }
+            else
+            {
+                Console.WriteLine($"A bemenő szám {s} osztóinak összege: {osztokosszege}");
+            }*/
+
+
+            /*19.Feladat
+            Console.Write("Írj be egy számot ");
+            int s = Convert.ToInt32(Console.ReadLine());
+            int i = 1;
+            int osztokosszege = 0;
+
+            while (i < s)
+            {
+                if (s % i == 0)
+                {
+                    osztokosszege += i;
+                }
+                i++;
+            }
+
+            if (osztokosszege  == s)
+            {
+                Console.WriteLine($"A szám {s} tökéletes szám.");
+            }
+            else
+            {
+                Console.WriteLine($"A szám {s} nem tökéletes szám.");
+            }*/
+
+            /*20.Feladat
+            int alap = -1;
+            while (alap <= 0 || alap > 10)
+            {
+                Console.Write("Kérem az alapot: ");
+                alap = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int kitevo = -1;
+            while (kitevo <=0 || kitevo > 10)
+            {
+                Console.Write("Kérem a kitevőt: ");
+                kitevo = Convert.ToInt32(Console.ReadLine());
+            }
+            
+            int hatvany = 1;
+
+            for (int i = 0; i < kitevo ; i++)
+            {
+                hatvany *= alap;
+            }
+            Console.Write($"A hatvány {hatvany}");*/
+
+
+            /*21.Feladat
+            int szam = -1;
+            while (szam <= 0 ) 
+            {
+                Console.Write("Kérem egy pozitív egész számot: ");
+                szam = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine(szam);
+
+            int szam = 1;
+            while (szam % 2 == 1 || szam  == -1)
+            {
+                Console.WriteLine($"Kérem az alapot");
+                szam = Convert.ToInt32(Console.ReadLine());
+            }*/
+
+            /*Plusz feladat: Prímszámra lépjen ki a ciklusból
+
+            int szam = 3;
+
+            while (primszamE(szam))
+            {
+                Console.Write("Kérek egy nem prímszámot");
+                szam = Convert.ToInt32(Console.ReadLine());
+            }*/
+
+            /*22.Feladat
+
+            int szam = 0;
+            int osszeg = 0;
+
+            while (szam <= 10)
+            {
+                
+                Console.Write("Kérek egy 10-nél kisebb egésez számot: ");
+                szam = Int32.Parse(Console.ReadLine());
+                if (szam <= 10)
+                {
+                    osszeg += szam;
+                    Console.WriteLine($"Az eddig beolvasott  megfelelő számok összege {osszeg}.");
+                }
+                else
+                {
+                    Console.WriteLine("Nem megfelelő szám!");
+                    break;
+                }
+            }
+
+
+            Console.WriteLine($"A beolvasott számok összege: {osszeg}");*/
+
+            /*36.Feladat
+            Console.Write("Kérem a sorok számát: ");
+            int sorok = Int32.Parse(Console.ReadLine());
+            Console.Write("Kérem az oszlopok számát: ");
+            int oszlopok = Int32.Parse(Console.ReadLine());
+
+            for (int i = 0; i < sorok; i++)
+            {
+                for (int j = 0; j < oszlopok; j++)
+                {
+                    if ((i + j) % 2 == 0)
+                    {
+                        Console.Write('X');
+                    }
+                    else
+                    {
+                        Console.Write('O');
+                    }
+                }
+                Console.WriteLine();
+            }*/
+
+            /*37.Feladat
+            Console.Write("Kérek egy számot: ");
+            int szam = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < szam; i++)
+            {
+                for (int j = 0; j < 2 * i + 1; j++)
+                {
+                    Console.Write('*');
+                }
+                Console.WriteLine();
+            }*/
+
+            /*38.Feladat
+            Console.WriteLine("Kérem a sorok számát: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < a; i++)
+            {
+                Console.SetCursorPosition(20 - i, i + 2);
+                for (int j = 0; j < 2 * i + 1; j++)
+                {
+                    Console.Write('*');
+                }
+                Console.WriteLine();
+            }*/
+
+            /*39.Fleadat
+
+
+            Console.Write("Kérem a sorok számát: ");
+            int sorok = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Kérem az oszlopok számát: ");
+            int oszlopok = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < sorok; i++)
+            {
+                for (int j = 0; j < oszlopok; j++)
+                {
+                    if ((i == 0) || (i == (sorok - 1)) || (i == (sorok -1) / 2))
+                    {
+                        Console.Write('*');
+                    }
+                    else if ((j == 0) || (j == oszlopok - 1) || (j == (oszlopok - 1) / 2))
+                    {
+                        Console.Write('*');
+                    }
+                    else
+                    {
+                        Console.Write(' ');
+                    }
+                    
+                }*/
+
+            /*41.Feladat
+
+            for (int i = 65; i < 91; i++)
+            {
+                Console.Write((char)i);
+            }
+            Console.WriteLine();
+            for (int j = 66; j < 91; j++)
+            {
+                Console.Write((char)j);
+            }
+            for (int k = 65; k < 66; k++)
+            {
+                Console.Write((char)k);
+            }*/
+
+            for (int i = 0; i < 27; i++)
+            {
+                for (int j = 65 + i ; j < 91; j++)
+                {
+                    Console.Write((char)j);
+                }
+
+                for (int k = 65; k < 65 + i; k++)
+                {
+                    Console.Write((char)k);
+                }
+                Console.WriteLine();
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             Console.ReadKey(true);
         }
     }
 }
+
+        /*static bool primszamE(int szam)
+        {
+            bool teljesul = true;
+
+            int osztokSzama = 0;
+
+            for (int i = 1; i <= szam; i++)
+            {
+                if (szam % i == 0)
+                {
+                    osztokSzama++;
+                }
+            }
+
+            if (osztokSzama == 2)
+            {
+                return teljesul;
+            }
+            else
+            {
+                return !teljesul;
+            }
+        }
+
+        }
+    }*/
+
