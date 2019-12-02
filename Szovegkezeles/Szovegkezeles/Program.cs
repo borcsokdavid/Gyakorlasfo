@@ -178,6 +178,8 @@ namespace Szovegkezeles
 
 
 
+
+
             Console.ReadKey(true);
 
 
