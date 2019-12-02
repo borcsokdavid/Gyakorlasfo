@@ -165,6 +165,9 @@ namespace Szovegkezeles
             }
             Console.WriteLine(kiir);
 
+
+
+
             
 
 
