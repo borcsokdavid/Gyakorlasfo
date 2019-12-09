@@ -115,8 +115,8 @@ namespace Ismetles
 
 
 
-            
-            for (int k = 1; k < 7; k++)
+
+            /*for (int k = 1; k < 7; k++)
             {
                 Console.SetCursorPosition(k * 7, 0);
                 Console.Write($"k = {k - 1}");
@@ -133,10 +133,102 @@ namespace Ismetles
                 for (int j = 1; j < i + 1; j++)
                 {
                     Console.SetCursorPosition(j * 7, i);
-                    int fakt = faktorialisszamitas(i) / (faktorialisszamitas(j) * faktorialisszamitas(i - j));
+                    int fakt = faktorialisszamitas(i - 1) / (faktorialisszamitas(j - 1) * faktorialisszamitas(i - j));
                     Console.Write(fakt);
                 }
+            }*/
+
+            /*for (int i = 1; i <= 20; i++)
+            {
+                if (i % 5 != 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }*/
+
+            /*for (int i = 1; i <= 20; i++)
+            {
+                if (i % 5 == 0)
+                {
+                    goto ide;
+                }
+                Console.WriteLine(i);
             }
+
+            ide:
+            Console.WriteLine("Itt ér véget a mese");*/
+
+
+            /*Console.Write("Adj meg egy napot a hét napjai közül: ");
+            string nap = Console.ReadLine();
+
+            switch (nap)
+            {
+                case "Hétfő":
+                    
+                    
+                case "Kedd":
+                    
+                case "Szerda":
+                    
+                case "Csütörtök":
+                    Console.WriteLine("Szeretem a hétköznapokat!");
+                    break;
+                case "Péntek":
+                    Console.WriteLine("Majdnem hétvége!");
+                    break;
+                case "Szombat":
+                    
+                case "Vasárnap":
+                    Console.WriteLine("Hurrá hétvége!");
+                    break;
+                default:
+                    Console.WriteLine("Nincs ilyen nap!");
+                    break;
+            }
+            */
+            /*Console.Write("Adj meg egy számot 1 és 10 között: ");
+            string szam = Console.ReadLine();
+
+            switch (szam)
+            {
+                case "0":
+                    Console.WriteLine("Ez a szám páros");
+                    break;
+                case "1":
+                    Console.WriteLine("Ez a szám páros");
+                    break;
+                case "3":
+                    Console.WriteLine("Ez a szám páratlan");
+                    break;
+                case "4":
+                    Console.WriteLine("Ez a szám páros");
+                    break;
+                case "5":
+                    Console.WriteLine("Ez a szám páratlan");
+                    break;
+                case "6":
+                    Console.WriteLine("Ez a szám páros");
+                    break;
+                case "7":
+                    Console.WriteLine("Ez a szám páratlan");
+                    break;
+                case "8":
+                    Console.WriteLine("Ez a szám páros");
+                    break;
+                case "9":
+                    Console.WriteLine("Ez a szám páratlan");
+                    break;
+                case "10":
+                    Console.WriteLine("Ez a szám páros");
+                    break;
+
+            }*/
+
+
+
+
+
 
 
             Console.ReadKey(true);
