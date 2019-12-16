@@ -10,6 +10,7 @@ namespace Snake
     {
         static void Main(string[] args)
         {
+            Random rnd = new Random();
             int szelesseg = Console.WindowWidth;
             int magassag = Console.WindowHeight;
             //Console.WriteLine($"{szelesseg} és {magassag}");
@@ -20,6 +21,10 @@ namespace Snake
             int[] xkord = new int[5];
             int[] ykord = new int[5];
 
+            int[] pontokx = new int[10];
+            int[] pontoky = new int[10];
+
+
             for (int i = 0; i < 5; i++)
             {
                 xkord[i] = x + i;
@@ -27,6 +32,13 @@ namespace Snake
 
             }
 
+            for (int i = 0; i < 10; i++)
+            {
+                pontokx[i] = rnd.Next(0, szelesseg);
+                pontoky[i] = rnd.Next(0, magassag);
+            }
+
+            megrajzol(pontokx, pontoky);
             megrajzol(xkord, ykord);
 
 
@@ -41,28 +53,64 @@ namespace Snake
                 {
                     case ConsoleKey.LeftArrow:
                         Console.Clear();
+                        megrajzol(pontokx, pontoky);
                         baloldalra(ref xkord, ref ykord);
                         Console.SetCursorPosition(x, y);
                         megrajzol(xkord, ykord);
+                        for (int i = 0; i < pontokx.Length; i++)
+                        {
+                            if (pontokx[i] == xkord[xkord.Length - 1] && pontoky[i] == ykord[ykord.Length - 1])
+                            {
+                                pontokx = eggyelcsokkent(pontokx[i] , pontokx);
+                                pontoky = eggyelcsokkent(pontoky[i] , pontoky);
+                            }
+                        }
 
                         break;
                     case ConsoleKey.UpArrow:
                         Console.Clear();
+                        megrajzol(pontokx, pontoky);
                         felfele(ref xkord, ref ykord);
                         Console.SetCursorPosition(x, y);
                         megrajzol(xkord, ykord);
+                        for (int i = 0; i < pontokx.Length; i++)
+                        {
+                            if (pontokx[i] == xkord[xkord.Length - 1] && pontoky[i] == ykord[ykord.Length - 1])
+                            {
+                                pontokx = eggyelcsokkent(pontokx[i], pontokx);
+                                pontoky = eggyelcsokkent(pontoky[i], pontoky);
+                            }
+                        }
                         break;
                     case ConsoleKey.RightArrow:
                         Console.Clear();
+                        megrajzol(pontokx, pontoky);
                         jobboldalra(ref xkord, ref ykord);
                         Console.SetCursorPosition(x, y);
                         megrajzol(xkord, ykord);
+                        for (int i = 0; i < pontokx.Length; i++)
+                        {
+                            if (pontokx[i] == xkord[xkord.Length - 1] && pontoky[i] == ykord[ykord.Length - 1])
+                            {
+                                pontokx = eggyelcsokkent(pontokx[i], pontokx);
+                                pontoky = eggyelcsokkent(pontoky[i], pontoky);
+                            }
+                        }
                         break;
                     case ConsoleKey.DownArrow:
                         Console.Clear();
+                        megrajzol(pontokx, pontoky);
                         lefele(ref xkord, ref ykord);
                         Console.SetCursorPosition(x, y);
                         megrajzol(xkord, ykord);
+                        for (int i = 0; i < pontokx.Length; i++)
+                        {
+                            if (pontokx[i] == xkord[xkord.Length - 1] && pontoky[i] == ykord[ykord.Length - 1])
+                            {
+                                pontokx = eggyelcsokkent(pontokx[i], pontokx);
+                                pontoky = eggyelcsokkent(pontoky[i], pontoky);
+                            }
+                        }
                         break;
                 }
             }
@@ -74,7 +122,7 @@ namespace Snake
 
         static void megrajzol(int[] x, int[] y)
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < x.Length; i++)
             {
 
                 Console.SetCursorPosition(x[i], y[i]);
@@ -128,6 +176,34 @@ namespace Snake
             }
             x[4] = atmenetx[4];
             y[4] = atmenety[4] - 1;
+
+
+
         }
+        
+        static int[] eggyelcsokkent(int szam, int[] a)
+        {
+            int[] b = new int[a.Length - 1];
+            for (int i = 0; i < b.Length; i++)
+            {
+                if (szam != a[i])
+                {
+                    b[i] = a[i];
+                }
+                else if (szam == a[i] && i != a.Length - 1)
+                {
+                    b[i] = a[i + 1];
+                    i++;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            return b;
+        }
+        
+        
     }
 }
