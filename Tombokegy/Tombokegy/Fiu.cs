@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Tombokegy
 {
-    class Fiu
+    class Fiu : Ember
     {
+
     }
 }
