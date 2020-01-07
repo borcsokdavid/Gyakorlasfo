@@ -11,60 +11,70 @@ namespace OsztalyokEgy
         static void Main(string[] args)
         {
             //Console.WriteLine($"Évfolyam: {Ember.evfolyam}, osztály: {Ember.osztaly}");
-           /*Ember.KiirOsztaly();
-            Ember[] emberTomb = new Ember[2];
+            /*Ember.KiirOsztaly();
+             Ember[] emberTomb = new Ember[2];
 
-            for (int i = 0; i < 2; i++)
-            {
-                bool letezik = false;
-                Console.Write("Kérem a magasságot: ");
-                int magassag = Int32.Parse(Console.ReadLine());
-                Console.Write("Kérem a testsúlyt: ");
-                int testsuly = Int32.Parse(Console.ReadLine());
-                Console.Write("Kérem a születési évet: ");
-                string szuletesiEv = Console.ReadLine();
-                Ember ember = new Ember();
-                try
-                {
-                    ember = new Ember(magassag, testsuly, szuletesiEv);
-                }
-                catch (ArgumentException e)
-                {
-                    Console.WriteLine(e.Message);
-                    letezik = true;
-                }
+             for (int i = 0; i < 2; i++)
+             {
+                 bool letezik = false;
+                 Console.Write("Kérem a magasságot: ");
+                 int magassag = Int32.Parse(Console.ReadLine());
+                 Console.Write("Kérem a testsúlyt: ");
+                 int testsuly = Int32.Parse(Console.ReadLine());
+                 Console.Write("Kérem a születési évet: ");
+                 string szuletesiEv = Console.ReadLine();
+                 Ember ember = new Ember();
+                 try
+                 {
+                     ember = new Ember(magassag, testsuly, szuletesiEv);
+                 }
+                 catch (ArgumentException e)
+                 {
+                     Console.WriteLine(e.Message);
+                     letezik = true;
+                 }
 
-                emberTomb[i] = ember;
-                ember.Kiir(i + 1);
-                Console.WriteLine($"Az {i + 1}. ember magassága: {ember.GetMagassag()} centiméter.");
-                Console.WriteLine($"Az {i + 1}. ember testsúlya: {ember.GetTestsuly()} kilogram.");
-                Console.WriteLine("Az {i + 1}. ember születési éve: {ember.GetSzuletesiEv()}.");
-                if (letezik) i--;
-            }
+                 emberTomb[i] = ember;
+                 ember.Kiir(i + 1);
+                 Console.WriteLine($"Az {i + 1}. ember magassága: {ember.GetMagassag()} centiméter.");
+                 Console.WriteLine($"Az {i + 1}. ember testsúlya: {ember.GetTestsuly()} kilogram.");
+                 Console.WriteLine("Az {i + 1}. ember születési éve: {ember.GetSzuletesiEv()}.");
+                 if (letezik) i--;
+             }
 
-            for (int i = 0; i < emberTomb.Length; i++)
-            {
-                Console.WriteLine($"Az {i + 1}. ember magassága: {emberTomb[i].Magassag} centiméter.");
-                Console.WriteLine($"Az {i + 1}. ember testsúlya: {emberTomb[i].Testsuly} kilogram.");
-                Console.WriteLine($"Az {i + 1}. ember születési éve: {emberTomb[i].SzuletesiEv}.");
-            }
+             for (int i = 0; i < emberTomb.Length; i++)
+             {
+                 Console.WriteLine($"Az {i + 1}. ember magassága: {emberTomb[i].Magassag} centiméter.");
+                 Console.WriteLine($"Az {i + 1}. ember testsúlya: {emberTomb[i].Testsuly} kilogram.");
+                 Console.WriteLine($"Az {i + 1}. ember születési éve: {emberTomb[i].SzuletesiEv}.");
+             }
 
-            Console.Write("Második ember új magassága: ");
-            int ujMagassag = Convert.ToInt32(Console.ReadLine());
+             Console.Write("Második ember új magassága: ");
+             int ujMagassag = Convert.ToInt32(Console.ReadLine());
 
+             try
+             {
+                 emberTomb[1].SetMagassag(ujMagassag);
+             }
+             catch (ArgumentException e)
+             {
+                 Console.WriteLine(e.Message);
+             }
+
+             emberTomb[1].Kiir(2);*/
+            
             try
             {
-                emberTomb[1].SetMagassag(ujMagassag);
+                Fiu fiu = new Fiu(176, 65, "2001.01.07", true);
+                fiu.Kiir(fiu.SzemelyiSzamEgyesE);
             }
             catch (ArgumentException e)
             {
                 Console.WriteLine(e.Message);
             }
 
-            emberTomb[1].Kiir(2);*/
-
-            Fiu fiu = new Fiu(176, 65, "2001.01.07", true);
-            fiu.Kiir(fiu.SzemelyiSzamEgyesE);
+            
+            
 
             Console.ReadKey(true);
         }

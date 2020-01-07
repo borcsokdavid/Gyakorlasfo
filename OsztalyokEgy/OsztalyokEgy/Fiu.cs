@@ -20,5 +20,7 @@ namespace OsztalyokEgy
         {
             this.szemelyiSzamEgyesE = szem;
         } 
+
+        
     }
 }
