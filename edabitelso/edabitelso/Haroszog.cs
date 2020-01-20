@@ -21,6 +21,8 @@ namespace edabitelso
             return (this.Alap * this.Magassag) / 2;
         }
 
+        
+
 
     }
 }
